@@ -6,25 +6,85 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-color-primary: #1a2a6c;
+  --ifm-color-primary-dark: #16245c;
+  --ifm-color-primary-darker: #142152;
+  --ifm-color-primary-darkest: #0f1a42;
+  --ifm-color-primary-light: #2e3d7a;
+  --ifm-color-primary-lighter: #3a4a85;
+  --ifm-color-primary-lightest: #4d5d97;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-hero-background-color: linear-gradient(135deg, #1a2a6c, #2a5298, #3a7bd5);
+  --ifm-hero-text-color: #ffffff;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
+  --ifm-color-primary: #3a7bd5;
+  --ifm-color-primary-dark: #2a5298;
+  --ifm-color-primary-darker: #244783;
+  --ifm-color-primary-darkest: #1e3c6e;
+  --ifm-color-primary-light: #4a8adb;
+  --ifm-color-primary-lighter: #5a96df;
+  --ifm-color-primary-lightest: #6ba2e4;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+/* Additional Atlas-inspired styling */
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+  z-index: 0;
+}
+
+.hero > div {
+  position: relative;
+  z-index: 1;
+}
+
+.button--primary {
+  background-color: var(--ifm-color-primary);
+  border-color: var(--ifm-color-primary);
+}
+
+.button--primary:hover {
+  background-color: var(--ifm-color-primary-dark);
+  border-color: var(--ifm-color-primary-dark);
+}
+
+.card {
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
 }
