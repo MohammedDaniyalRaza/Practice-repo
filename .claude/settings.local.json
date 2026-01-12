@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx docusaurus swizzle @docusaurus/Theme-classic Footer --typescript)"
+    ]
+  }
+}
