@@ -63,6 +63,54 @@ function NewsletterSection() {
   );
 }
 
+function TestimonialsSection() {
+  const testimonials = [
+    {
+      quote: "This book revolutionized my understanding of how physics principles can enhance AI algorithms. A must-read for researchers in both fields.",
+      author: "Dr. Sarah Chen",
+      role: "AI Research Lead, Tech Innovations"
+    },
+    {
+      quote: "The clear explanations and practical examples make complex concepts accessible. The bridge between physics and AI has never been clearer.",
+      author: "Prof. Michael Rodriguez",
+      role: "Director of Robotics Lab, University of Science"
+    },
+    {
+      quote: "An exceptional resource that combines theoretical foundations with real-world applications. Highly recommended for practitioners and academics alike.",
+      author: "Dr. James Liu",
+      role: "Senior Research Scientist, AI Institute"
+    }
+  ];
+
+  return (
+    <section className={styles.testimonialsSection}>
+      <div className="container">
+        <div className="text--center padding-bottom--lg">
+          <Heading as="h2">What Experts Are Saying</Heading>
+          <p className="subtitle">Join thousands of researchers and engineers advancing Physical AI</p>
+        </div>
+        <div className="row">
+          {testimonials.map((testimonial, index) => (
+            <div className="col col--4 margin-bottom--lg" key={index}>
+              <div className={clsx('card', styles.testimonialCard)}>
+                <div className="card__body">
+                  <p className={styles.quote}>"{testimonial.quote}"</p>
+                </div>
+                <div className="card__footer">
+                  <div className={styles.authorInfo}>
+                    <strong>{testimonial.author}</strong>
+                    <small className={styles.role}>{testimonial.role}</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export default function Home(): ReactNode {
   const {siteConfig} = useDocusaurusContext();
   return (
@@ -72,6 +120,7 @@ export default function Home(): ReactNode {
       <HomepageHeader />
       <main>
         <HomepageFeatures />
+        <TestimonialsSection />
         <NewsletterSection />
       </main>
     </Layout>

@@ -99,11 +99,36 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Chapters',
           items: [
             {
-              label: 'Tutorial',
+              label: 'Introduction to Physical AI',
               to: '/docs/intro',
+            },
+            {
+              label: 'Physics-Informed Neural Networks',
+              to: '/docs/chapter1',
+            },
+            {
+              label: 'Neural Physics Engines',
+              to: '/docs/chapter2',
+            },
+          ],
+        },
+        {
+          title: 'Resources',
+          items: [
+            {
+              label: 'Research Papers',
+              href: '/docs/research',
+            },
+            {
+              label: 'Code Examples',
+              href: '/docs/examples',
+            },
+            {
+              label: 'Datasets',
+              href: '/docs/datasets',
             },
           ],
         },
@@ -111,34 +136,38 @@ const config: Config = {
           title: 'Community',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              label: 'GitHub',
+              href: 'https://github.com/physical-ai-book',
             },
             {
               label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
+              href: 'https://discord.gg/physical-ai',
             },
             {
-              label: 'X',
-              href: 'https://x.com/docusaurus',
+              label: 'Twitter',
+              href: 'https://twitter.com/physical_ai_book',
             },
           ],
         },
         {
-          title: 'More',
+          title: 'Legal',
           items: [
             {
-              label: 'Blog',
-              to: '/blog',
+              label: 'Privacy Policy',
+              href: '/privacy',
             },
             {
-              label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              label: 'Terms of Service',
+              href: '/tos',
+            },
+            {
+              label: 'Cookie Policy',
+              href: '/cookies',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Physical AI Book. All rights reserved.`,
     },
     prism: {
       theme: prismThemes.github,
