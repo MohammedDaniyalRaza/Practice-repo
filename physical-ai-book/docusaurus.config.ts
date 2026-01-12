@@ -99,19 +99,19 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Chapters',
+          title: 'Docs',
           items: [
             {
-              label: 'Introduction to Physical AI',
+              label: 'Tutorial',
               to: '/docs/intro',
             },
             {
-              label: 'Physics-Informed Neural Networks',
-              to: '/docs/chapter1',
+              label: 'Humanoid Modeling with URDF',
+              to: '/docs/humanoid-modeling-with-urdf',
             },
             {
-              label: 'Neural Physics Engines',
-              to: '/docs/chapter2',
+              label: 'Python Agents to ROS Controllers',
+              to: '/docs/python-agents-to-ros-controllers',
             },
           ],
         },
@@ -119,16 +119,16 @@ const config: Config = {
           title: 'Resources',
           items: [
             {
-              label: 'Research Papers',
-              href: '/docs/research',
+              label: 'Markdown Page',
+              to: '/markdown-page',
             },
             {
-              label: 'Code Examples',
-              href: '/docs/examples',
+              label: 'GitHub',
+              href: 'https://github.com/physical-ai-book',
             },
             {
-              label: 'Datasets',
-              href: '/docs/datasets',
+              label: 'Blog',
+              to: '/blog',
             },
           ],
         },
@@ -137,15 +137,15 @@ const config: Config = {
           items: [
             {
               label: 'GitHub',
-              href: 'https://github.com/physical-ai-book',
+              href: 'https://github.com/facebook/docusaurus',
             },
             {
               label: 'Discord',
-              href: 'https://discord.gg/physical-ai',
+              href: 'https://discordapp.com/invite/docusaurus',
             },
             {
               label: 'Twitter',
-              href: 'https://twitter.com/physical_ai_book',
+              href: 'https://twitter.com/docusaurus',
             },
           ],
         },
@@ -154,15 +154,15 @@ const config: Config = {
           items: [
             {
               label: 'Privacy Policy',
-              href: '/privacy',
+              href: 'https://opensource.org/licenses/MIT',
             },
             {
               label: 'Terms of Service',
-              href: '/tos',
+              href: 'https://opensource.org/licenses/MIT',
             },
             {
               label: 'Cookie Policy',
-              href: '/cookies',
+              href: 'https://opensource.org/licenses/MIT',
             },
           ],
         },

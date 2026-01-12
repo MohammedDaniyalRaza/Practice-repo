@@ -125,9 +125,9 @@ const Footer = () => {
             <span>{copyright}</span>
           </div>
           <div className={styles.bottomLinks}>
-            <FooterLink to="/privacy" label="Privacy Policy" />
-            <FooterLink to="/tos" label="Terms of Service" />
-            <FooterLink to="/cookies" label="Cookies" />
+            <FooterLink href="https://opensource.org/licenses/MIT" label="Privacy Policy" />
+            <FooterLink href="https://opensource.org/licenses/MIT" label="Terms of Service" />
+            <FooterLink href="https://opensource.org/licenses/MIT" label="Cookies" />
           </div>
         </div>
       </div>
