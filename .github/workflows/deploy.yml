@@ -1,0 +1,36 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main # Or your default branch
+
+jobs:
+  deploy:
+    name: Deploy to GitHub Pages
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./physical-ai-book # Set the working directory
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: 'npm'
+          cache-dependency-path: physical-ai-book/package-lock.json # Path to package-lock.json
+
+      - name: Install dependencies
+        run: npm install
+      - name: Build website
+        run: npm run build
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./physical-ai-book/build
+          # The following lines are to deploy to a sub-folder of the gh-pages branch
+          # e.g. https://<user>.github.io/<repo-name>/<sub-folder-name>
+          # If you want to deploy to the root, remove these lines
+          # destination_dir: ./your-sub-folder-name

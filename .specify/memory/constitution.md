@@ -1,55 +1,66 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!-- Sync Impact Report:
+Version change: None -> 1.0.0
+List of modified principles: All (initial creation)
+Added sections: Standards, Scope & RAG Chatbot, Tech Stack & Success Criteria
+Removed sections: None
+Templates requiring updates:
+- .specify/templates/plan-template.md ⚠ pending
+- .specify/templates/spec-template.md ⚠ pending
+- .specify/templates/tasks-template.md ⚠ pending
+- .specify/templates/commands/*.md ⚠ pending
+Follow-up TODOs: None
+-->
+# AI-Native Book on Physical AI & Humanoid Robotics with Embedded RAG Chatbot Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. Technical Accuracy
+Every tool, concept, and implementation described MUST be technically accurate and reflect real-world usage (real tools only).
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### II. Clear, Code-First Explanations
+Explanations MUST be clear, concise, and prioritize executable code examples. Code MUST be the primary means of demonstration.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### III. Spec-Driven Structure
+The project MUST adhere to a Spec-Driven Development (SDD) structure using Spec-Kit Plus conventions for all design artifacts (spec, plan, tasks).
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### IV. No Hallucinations, No Assumptions
+Content and responses MUST be factual, verifiable, and derived from explicit, authoritative sources. Assumptions and fabricated information are strictly prohibited.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+## Standards
 
-### [PRINCIPLE_6_NAME]
+- Use official documentation only (ROS 2, Gazebo, NVIDIA Isaac, OpenAI, FastAPI).
+- All code MUST be executable, minimal, and well-commented.
+- Documentation MUST be Docusaurus-compatible Markdown.
+- Follow Spec-Kit Plus repository conventions for file structure and content.
 
+## Scope & RAG Chatbot
 
-[PRINCIPLE__DESCRIPTION]
+### Scope: Physical AI & Embodied Intelligence
+- **Modules:**
+  1. ROS 2 (nodes, topics, URDF, rclpy)
+  2. Gazebo & Unity (physics, sensors, digital twins)
+  3. NVIDIA Isaac (Sim, Isaac ROS, Nav2)
+  4. Vision-Language-Action (LLMs → ROS actions)
+  5. Capstone: Autonomous Humanoid Robot
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
-
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
-
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
-
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+### RAG Chatbot
+- Answers MUST only be derived from indexed book content.
+- Highlighted-text–only answering MUST be supported.
+- No content outside the provided context.
+- Responses MUST be deterministic.
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+### Tech Stack
+- **Book:** Docusaurus → GitHub Pages
+- **Backend:** FastAPI
+- **AI:** OpenAI Agents / ChatKit
+- **DB:** Neon Postgres + Qdrant
+- **Language:** Python, TypeScript
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+### Success Criteria
+- The book MUST build and deploy successfully.
+- All code examples MUST run without modification.
+- RAG chatbot answers MUST be accurate and bounded by the indexed content.
+
+**Version**: 1.0.0 | **Ratified**: 2025-12-28 | **Last Amended**: 2025-12-28
