@@ -1,7 +1,10 @@
 {
   "permissions": {
     "allow": [
-      "Bash(npx docusaurus swizzle @docusaurus/Theme-classic Footer --typescript)"
+      "Bash(npx docusaurus swizzle @docusaurus/Theme-classic Footer --typescript)",
+      "Bash(npm run dev)",
+      "Bash(npm run start)",
+      "Bash(npx docusaurus start --port 3001)"
     ]
   }
 }

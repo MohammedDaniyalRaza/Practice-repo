@@ -6,35 +6,45 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #1a2a6c;
-  --ifm-color-primary-dark: #16245c;
-  --ifm-color-primary-darker: #142152;
-  --ifm-color-primary-darkest: #0f1a42;
-  --ifm-color-primary-light: #2e3d7a;
-  --ifm-color-primary-lighter: #3a4a85;
-  --ifm-color-primary-lightest: #4d5d97;
+  --ifm-color-primary: #2563eb;
+  --ifm-color-primary-dark: #1d4ed8;
+  --ifm-color-primary-darker: #1a41be;
+  --ifm-color-primary-darkest: #122f86;
+  --ifm-color-primary-light: #3b82f6;
+  --ifm-color-primary-lighter: #60a5fa;
+  --ifm-color-primary-lightest: #93c5fd;
+  --ifm-color-secondary: #64748b;
+  --ifm-color-success: #10b981;
+  --ifm-color-info: #0ea5e9;
+  --ifm-color-warning: #f59e0b;
+  --ifm-color-danger: #ef4444;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
-  --ifm-hero-background-color: linear-gradient(135deg, #1a2a6c, #2a5298, #3a7bd5);
+  --ifm-hero-background-color: linear-gradient(135deg, #0f172a, #1e293b, #334155);
   --ifm-hero-text-color: #ffffff;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #3a7bd5;
-  --ifm-color-primary-dark: #2a5298;
-  --ifm-color-primary-darker: #244783;
-  --ifm-color-primary-darkest: #1e3c6e;
-  --ifm-color-primary-light: #4a8adb;
-  --ifm-color-primary-lighter: #5a96df;
-  --ifm-color-primary-lightest: #6ba2e4;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-color-primary: #3b82f6;
+  --ifm-color-primary-dark: #2563eb;
+  --ifm-color-primary-darker: #1d4ed8;
+  --ifm-color-primary-darkest: #1e40af;
+  --ifm-color-primary-light: #60a5fa;
+  --ifm-color-primary-lighter: #93c5fd;
+  --ifm-color-primary-lightest: #dbeafe;
+  --ifm-background-color: #0f172a;
+  --ifm-background-surface-color: #1e293b;
+  --ifm-footer-background-color: #1e293b;
+  --ifm-navbar-background-color: #0f172a;
+  --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.1);
 }
 
 /* Additional Atlas-inspired styling */
 .hero {
   position: relative;
   overflow: hidden;
+  background: linear-gradient(135deg, #0f172a, #1e293b, #334155) !important;
 }
 
 .hero::before {
@@ -44,13 +54,21 @@
   left: -50%;
   width: 200%;
   height: 200%;
-  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+  background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0) 70%);
   z-index: 0;
 }
 
 .hero > div {
   position: relative;
   z-index: 1;
+}
+
+.hero__title {
+  color: white !important;
+}
+
+.hero__subtitle {
+  color: rgba(255, 255, 255, 0.9) !important;
 }
 
 .button--primary {
@@ -63,10 +81,22 @@
   border-color: var(--ifm-color-primary-dark);
 }
 
+.button--secondary {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+.button--secondary:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
 .card {
   border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
+  background-color: var(--ifm-background-surface-color, #f8fafc);
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 html {
@@ -87,4 +117,45 @@ html {
 
 .fade-in-up {
   animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* Text color improvements for better contrast */
+.text--center {
+  text-align: center;
+}
+
+.text--left {
+  text-align: left;
+}
+
+.text--right {
+  text-align: right;
+}
+
+/* Dark mode specific text enhancements */
+[data-theme='dark'] .hero__title,
+[data-theme='dark'] .hero__subtitle {
+  color: white !important;
+}
+
+[data-theme='dark'] h1, [data-theme='dark'] h2, [data-theme='dark'] h3 {
+  color: white !important;
+}
+
+[data-theme='dark'] p, [data-theme='dark'] span, [data-theme='dark'] div {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Improved section backgrounds */
+.section {
+  padding: 4rem 0;
+}
+
+[data-theme='dark'] .section {
+  background-color: #0f172a;
+}
+
+[data-theme='dark'] .card {
+  background-color: #1e293b;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
